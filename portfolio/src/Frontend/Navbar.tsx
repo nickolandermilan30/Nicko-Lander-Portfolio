@@ -3,7 +3,14 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Sun, Moon, Menu, X, ArrowUp } from "lucide-react";
 import { Link } from "react-router-dom";
 
-const Navbar = ({ darkMode, setDarkMode }) => {
+interface NavbarProps {
+  darkMode: boolean;
+  setDarkMode: (value: boolean) => void;
+}
+
+const Navbar: React.FC<NavbarProps> = ({ darkMode, setDarkMode }) => {
+
+
 
   const [menuOpen, setMenuOpen] = useState(false);
 
