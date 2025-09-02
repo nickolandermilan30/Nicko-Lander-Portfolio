@@ -32,7 +32,7 @@ const Main = ({ darkMode, setDarkMode }: MainProps) => {
           }`}
           style={!darkMode ? { color: "#2f3545" } : {}}
         >
-          Nicko
+          Nicko Lander
           <span
             className={`ml-1 w-3 h-3 rounded-full transition-colors duration-500 ${
               darkMode ? "bg-yellow-400" : "bg-red-500"
