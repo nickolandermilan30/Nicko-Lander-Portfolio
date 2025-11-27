@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom"; // 👈 Import navigation
-// Import local images
 import myPicture from "../Image/Mypicture/me.png";
 import shadowImage from "../Image/img/shadow.png";
 import { ArrowRight, Sun, Moon } from "lucide-react";
@@ -16,11 +15,9 @@ const roles = [
 const Title = ({
   darkMode,
   setMenuOpen,
-  setDarkMode,
 }: {
   darkMode: boolean;
   setMenuOpen: (open: boolean) => void;
-  setDarkMode: (dark: boolean) => void;
 }) => {
   const [index, setIndex] = useState(0);
   const navigate = useNavigate(); // 👈 Hook para mag-navigate
@@ -81,11 +78,11 @@ const Title = ({
 
           {/* Buttons Row */}
           <div className="flex gap-4">
-            {/* Dark/Light Mode Toggle Button */}
+            {/* Designs Button */}
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              onClick={() => navigate("/edits")} // 👈 Navigate to Edits page
+              onClick={() => navigate("/edits")}
               className={`mt-4 px-5 py-2 flex items-center gap-2 rounded-full font-semibold shadow-lg transition-colors duration-500 ${
                 darkMode
                   ? "bg-gray-800 text-yellow-400 hover:bg-gray-700"
@@ -191,7 +188,6 @@ const Title = ({
           </p>
 
           <div className="flex justify-center gap-4">
-            {/* Dark/Light Mode Toggle */}
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -206,7 +202,6 @@ const Title = ({
               <span>Designs</span>
             </motion.button>
 
-            {/* See More */}
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}

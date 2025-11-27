@@ -166,7 +166,7 @@ const Main = ({ darkMode, setDarkMode }: MainProps) => {
 
       {/* Content */}
       <div className="flex justify-center items-center h-[80vh]">
-        <Title darkMode={darkMode} setMenuOpen={setMenuOpen} setDarkMode={setDarkMode} />
+          <Title darkMode={darkMode} setMenuOpen={setMenuOpen} />
       </div>
       <Project darkMode={darkMode} />
       <br />
