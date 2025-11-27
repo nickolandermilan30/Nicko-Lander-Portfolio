@@ -144,24 +144,21 @@ const Main = ({ darkMode, setDarkMode }: MainProps) => {
                 </Link>
 
                 <Link
-  to="/skills"
-  className="hover:text-red-500 transition-colors"
-  onClick={() => setMenuOpen(false)}
->
-  Skills
-</Link>
-
+                  to="/skills"
+                  className="hover:text-red-500 transition-colors"
+                  onClick={() => setMenuOpen(false)}
+                >
+                  Skills
+                </Link>
 
                 <Link
-                   to="/getintouch"
-                   className="hover:text-red-500 transition-colors"
-                   onClick={() => setMenuOpen(false)}
-                 >
-                   Get in Touch
-                 </Link>
+                  to="/getintouch"
+                  className="hover:text-red-500 transition-colors"
+                  onClick={() => setMenuOpen(false)}
+                >
+                  Get in Touch
+                </Link>
               </div>
-
-             
             </motion.div>
           </>
         )}
@@ -169,8 +166,7 @@ const Main = ({ darkMode, setDarkMode }: MainProps) => {
 
       {/* Content */}
       <div className="flex justify-center items-center h-[80vh]">
-        <Title darkMode={darkMode} setMenuOpen={setMenuOpen} />
-
+        <Title darkMode={darkMode} setMenuOpen={setMenuOpen} setDarkMode={setDarkMode} />
       </div>
       <Project darkMode={darkMode} />
       <br />
