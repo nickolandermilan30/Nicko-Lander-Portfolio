@@ -9,6 +9,7 @@ import pomodoro from "../Image/project/pomodoro.png";
 import star from "../Image/project/star.png";
 import utaxi from "../Image/project/Utaxi.png";
 import wegigs from "../Image/project/wegigs.png";
+import arregmatica from "../Image/project/Arreggmatica.png"; // NEW IMAGE
 
 const projects = [
   {
@@ -70,6 +71,16 @@ const projects = [
     github: "https://github.com/nickolandermilan30/WeGigs",
     live: "https://wegigs.online/",
     tech: ["JavaScript", "ReactJS", "MERN Stack", "Tailwind CSS", "MongoDB"],
+  },
+  {
+    id: 7, // NEW PROJECT
+    name: "Arregmatica",
+   description:
+  "A web platform to enhance sentences and check words using AI, featuring community collaboration and admin management.",
+    image: arregmatica,
+    github: "https://github.com/nickolandermilan30/Arregmatica-AI.git", // Add GitHub link if available
+    live: "https://arregmatica-ai.vercel.app/",
+    tech: ["JavaScript", "ReactJS", "Tailwind CSS", "MERN Stack"],
   },
 ];
 
