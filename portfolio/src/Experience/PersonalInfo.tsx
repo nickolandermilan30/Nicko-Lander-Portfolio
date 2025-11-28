@@ -1,6 +1,12 @@
-import  { useState } from "react";
+import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Eye } from "lucide-react"; // Icon for viewing full image
+import { Eye } from "lucide-react";
+
+// ==== IMPORT ALL CERTIFICATE IMAGES HERE ====
+import c1 from "../Image/certificate/c1.png";
+import c2 from "../Image/certificate/c2.png";
+import c3 from "../Image/certificate/c3.jpg";
+import c4 from "../Image/certificate/c4.jpg";
 
 interface PersonalInfoProps {
   darkMode: boolean;
@@ -11,25 +17,25 @@ const PersonalInfo = ({ darkMode }: PersonalInfoProps) => {
 
   const certificates = [
     {
-      img: "/src/Image/certificate/c1.png",
+      img: c1,
       title: "Marketing Participation Meeting",
       subtitle: "Attended company marketing sessions",
       description: "Participated actively in planning and discussion meetings.",
     },
     {
-      img: "/src/Image/certificate/c2.png",
+      img: c2,
       title: "600hrs OJT Certification",
       subtitle: "Completed 600 hours of On-the-Job Training",
       description: "Gained practical experience in real work environment.",
     },
     {
-      img: "/src/Image/certificate/c3.jpg",
+      img: c3,
       title: "Diploma of BSIT Graduate",
       subtitle: "Bachelor of Science in Information Technology",
       description: "Successfully graduated with a degree in BSIT.",
     },
     {
-      img: "/src/Image/certificate/c4.jpg",
+      img: c4,
       title: "Certification of Recognition",
       subtitle: "Showcasing Capstone Project",
       description: "Recognized for outstanding capstone project presentation.",
@@ -70,7 +76,6 @@ const PersonalInfo = ({ darkMode }: PersonalInfoProps) => {
                 : "bg-gray-50 border-gray-300 text-gray-900"
             }`}
           >
-            {/* Top-right icon */}
             <div className="absolute top-3 right-3 z-10">
               <button
                 onClick={() => setSelectedImage(item.img)}
@@ -80,15 +85,10 @@ const PersonalInfo = ({ darkMode }: PersonalInfoProps) => {
               </button>
             </div>
 
-            <img
-              src={item.img}
-              alt={item.title}
-              className="w-full h-64 object-cover"
-            />
+            <img src={item.img} alt={item.title} className="w-full h-64 object-cover" />
 
             <div className="p-5 text-center">
               <h3 className="text-xl font-semibold mb-1">{item.title}</h3>
-              {/* Subtitle and description text */}
               <p className={`${darkMode ? "text-gray-400" : "text-black"} text-sm mb-2`}>
                 {item.subtitle}
               </p>
@@ -100,7 +100,6 @@ const PersonalInfo = ({ darkMode }: PersonalInfoProps) => {
         ))}
       </div>
 
-      {/* Modal for full image */}
       <AnimatePresence>
         {selectedImage && (
           <motion.div
@@ -115,9 +114,6 @@ const PersonalInfo = ({ darkMode }: PersonalInfoProps) => {
               src={selectedImage}
               alt="Full Certificate"
               className="max-h-[90vh] max-w-[90vw] rounded-lg shadow-lg"
-              initial={{ scale: 0.8 }}
-              animate={{ scale: 1 }}
-              exit={{ scale: 0.8 }}
             />
           </motion.div>
         )}
